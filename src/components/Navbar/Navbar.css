@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  max-width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navbar > h1 {
+  font-size: 2rem;
+}
+
+ul {
+  display: flex;
+  gap: 3rem;
+  justify-self: space-between;
+}
+a {
+  color: black;
+}
+
+.navbar > .buttons {
+  display: flex;
+  gap: 1rem;
+}
