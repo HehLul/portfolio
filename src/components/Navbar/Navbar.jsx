@@ -9,10 +9,10 @@ function Navbar() {
         <a href="">Blog</a>
       </ul>
 
-      <div className="buttons">
+      {/* <div className="buttons">
         <button>Lets Connect</button>
         <button>See My Work</button>
-      </div>
+      </div> */}
     </div>
   );
 }

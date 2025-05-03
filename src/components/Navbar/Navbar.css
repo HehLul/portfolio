@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
-  max-width: 90%;
-  margin: 0 auto;
+  /* max-width: 90%;
+  margin: 0 auto; */
   justify-content: space-between;
   align-items: baseline;
 }
@@ -20,7 +20,7 @@ a {
   color: black;
 }
 
-.navbar > .buttons {
-  display: flex;
+/* .navbar > .buttons {
+  display: none;
   gap: 1rem;
-}
+} */
