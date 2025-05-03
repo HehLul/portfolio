@@ -1,0 +1,32 @@
+.home {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 4rem;
+  max-width: 90%;
+  margin-left: auto;
+  align-items: center;
+}
+
+img {
+  max-width: 200px;
+}
+
+.right,
+.left {
+  /* max-width: 500px; */
+}
+
+h1,
+h2,
+p,
+button {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.7rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
