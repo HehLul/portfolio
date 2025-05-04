@@ -9,14 +9,17 @@
 }
 
 img {
-  width: 92px; /* or any desired size */
-  height: 92px;
+  width: 115px; /* or any desired size */
+  height: 115px;
   object-fit: cover; /* ensures the image fills the circle without distortion */
   border-radius: 50%; /* makes it a perfect circle */
 }
 
 .left {
   width: 55vw;
+}
+.right {
+  margin-top: -2rem;
 }
 
 h1,

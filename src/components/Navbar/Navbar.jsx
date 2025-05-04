@@ -5,7 +5,7 @@ function Navbar() {
       <h1>Salman.</h1>
       <ul>
         <a href="">About me</a>
-        <a href="">My Works</a>
+        <a href="">My Work</a>
         <a href="">Blog</a>
       </ul>
 

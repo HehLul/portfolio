@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="home">
       <div className="left">
-        <img src="pfp.jpg" />
+        <img src="jacksonpark_pfp.jpg" />
         <h1>Hello! I'm Ahmed Salman</h1>
       </div>
       <div className="right">
