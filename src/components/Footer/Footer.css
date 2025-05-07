@@ -19,6 +19,7 @@
 
 .footer-links {
   /* margin-top: 0.5rem; */
+  color: #333;
   display: flex;
   justify-content: center;
   gap: 1.5rem;

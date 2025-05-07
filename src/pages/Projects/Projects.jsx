@@ -5,10 +5,10 @@ function Projects() {
     <div className="projects">
       <div className="featured">
         <h2>Featured</h2>
-        {/* <ul className="featured-projects">
+        <ul className="featured-projects">
           <div>
-            <img src="" alt="" />
-            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <img src="/pfp.jpg" alt="" />
+            <h3>DeepSheep: Monitize your AI Chatbot</h3>
             <p>2025</p>
           </div>
           <div>
@@ -21,7 +21,7 @@ function Projects() {
             <h3>DeepSheep: Motize your AI Chatbot</h3>
             <p>2025</p>
           </div>
-        </ul> */}
+        </ul>
       </div>
       <div className="all">
         <div className="all-header">
@@ -36,6 +36,53 @@ function Projects() {
             <li>In Progress</li>
           </ul>
         </div>
+        <ul className="all-projects">
+          <div>
+            <img src="/pfp.jpg" alt="" />
+            <h3>DeepSheep: Monitize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="/pfp.jpg" alt="" />
+            <h3>DeepSheep: Monitize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="/pfp.jpg" alt="" />
+            <h3>DeepSheep: Monitize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>DeepSheep: Motize your AI Chatbot</h3>
+            <p>2025</p>
+          </div>
+        </ul>
       </div>
     </div>
   );
