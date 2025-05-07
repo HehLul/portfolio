@@ -1,0 +1,35 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+.projects h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.projects ul {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.projects li {
+  cursor: pointer;
+  align-self: center;
+  text-decoration: none;
+  list-style: none;
+  padding: 4px 24px;
+  background-color: white;
+  color: black;
+  border: 1px black solid;
+  border-radius: 100px;
+  transition: transform 0.2s ease-in-out;
+}
+.projects li:hover {
+  transform: scale(1.05); /* Slightly increase size */
+}
+.all-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10rem;
+}
