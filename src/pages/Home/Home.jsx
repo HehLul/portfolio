@@ -1,6 +1,14 @@
+// import { useNavigate } from "react";
 import "./Home.css";
 
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/projects");
+  };
   return (
     <div className="home">
       <div className="left">
@@ -15,7 +23,8 @@ function Home() {
         </p>
         <div className="buttons">
           <button>Talk with me</button>
-          <button>See my work</button>
+
+          <button onClick={handleClick}>See my work</button>
         </div>
       </div>
     </div>
