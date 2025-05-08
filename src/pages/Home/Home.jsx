@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className="home">
       <div className="left">
-        <img src="jacksonpark_pfp.jpg" />
+        <img src="bitmoji.jpg" />
         <h1>Hello! I'm Ahmed Salman</h1>
       </div>
       <div className="right">
