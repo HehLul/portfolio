@@ -14,7 +14,7 @@ function Projects() {
         <ul className="featured-projects">
           {projects.slice(0, 3).map((project, index) => (
             <div key={index}>
-              <img src={project.image || "/pfp.jpg"} alt="" />
+              <img src={project.image_path || "/pfp.jpg"} alt="" />
               <h3>{project.title}</h3>
               <p>{project.date_built}</p>
             </div>
@@ -39,7 +39,7 @@ function Projects() {
         <ul className="all-projects">
           {projects.map((project, index) => (
             <div key={index}>
-              <img src={project.image || "/pfp.jpg"} alt="" />
+              <img src={project.image_path || "/pfp.jpg"} alt="" />
               <h3>{project.title}</h3>
               <p>{project.date_built}</p>
             </div>
