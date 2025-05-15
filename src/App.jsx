@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
+import ProjectPage from "./pages/ProjectPage/ProjectPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectPage />} />
           </Routes>
         </main>
         <Footer></Footer>

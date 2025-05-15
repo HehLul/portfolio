@@ -1,17 +1,18 @@
 import useProjects from "../../hooks/useProjects";
 import "./Projects.css";
 
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Projects() {
   const { projects, loading, error } = useProjects();
+  const navigate = useNavigate();
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading projects.</p>;
 
-  const handleClickProject = (projectId) => {
-    console.log("You clicked on project:", projectId);
-    // Navigate(`/projects/${projectId}`); // if using React Router
+  const handleClickProject = (projectSlug) => {
+    console.log("You clicked on project:", projectSlug);
+    navigate(`/projects/${projectSlug}`);
   };
 
   return (
@@ -23,7 +24,7 @@ function Projects() {
             <div
               key={project.id}
               className="project"
-              onClick={() => handleClickProject(project.id)}
+              onClick={() => handleClickProject(project.slug)}
             >
               <img src={project.image_path || "/pfp.jpg"} alt="" />
               <h3>{project.title}</h3>
@@ -52,7 +53,7 @@ function Projects() {
             <div
               key={project.id}
               className="project"
-              onClick={() => handleClickProject(project.id)}
+              onClick={() => handleClickProject(project.slug)}
             >
               <img src={project.image_path || "/pfp.jpg"} alt="" />
               <h3>{project.title}</h3>

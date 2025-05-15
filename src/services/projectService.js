@@ -20,3 +20,13 @@ export async function getAllProjects() {
   });
   return formattedData;
 }
+
+export async function getProject(slug) {
+  const { data, error } = await supabase
+    .from("projects")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+  if (error) throw error;
+  return data;
+}
