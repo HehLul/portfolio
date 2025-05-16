@@ -22,10 +22,10 @@
   margin-top: -2rem;
 }
 
-h1,
-h2,
-p,
-button {
+.home h1,
+.home h2,
+.home p,
+.home button {
   font-weight: 400;
 }
 

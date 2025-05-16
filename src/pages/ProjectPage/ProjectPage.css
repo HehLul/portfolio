@@ -1,4 +1,136 @@
 .project-page {
   margin: 0;
-  padding: 0;
+  padding-top: 2rem;
+}
+
+.project-page > svg {
+  margin-left: -1rem;
+}
+
+.project-page > .main {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+.project-page > .main > .text {
+  max-width: 55vw;
+}
+.project-page > .main > img {
+  height: 300px;
+  width: auto;
+  object-fit: contain; /* or cover */
+  border-radius: 0.5rem;
+  border: 1px grey solid;
+}
+
+.project-page > .main > .text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-weight: 500;
+}
+.project-page h2 {
+  font-size: 2.2rem;
+}
+.project-page > .main > .text p {
+  font-weight: 400;
+  font-size: 1.05rem;
+  margin: 2.2rem auto;
+}
+
+.project-page .tags {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-page .tags li {
+  cursor: pointer;
+  align-self: center;
+  text-decoration: none;
+  list-style: none;
+  padding: 4px 24px;
+  /* background-color: #e2e2e2; */
+  color: black;
+  border: 1px black solid;
+  border-radius: 100px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-page > .main button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.4em;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: inherit;
+  /* color: black;
+  background-color: #ffffff;
+  border: 1px solid black; */
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+/* Details */
+
+.project-page > .details {
+  margin: 6rem auto 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-self: center; */
+  text-align: center;
+  border-top: solid 1px black;
+  max-width: 70vw;
+  /* margin-right: auto; */
+}
+
+.project-page > .details > h2 {
+  font-weight: 500;
+  /* text-decoration: underline; */
+}
+
+.project-page > .details > .containers {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-page > .details > .containers > * {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid gray;
+  text-align: left;
+  padding: 0.5rem 1rem;
+
+  border-radius: 28px;
+  gap: 12;
+}
+.project-page > .details > .containers > *:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.project-page .main,
+.project-page .details {
+  animation: fadeInUp 0.5s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
