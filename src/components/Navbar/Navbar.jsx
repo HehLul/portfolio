@@ -1,27 +1,50 @@
 import "./Navbar.css";
-
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link to="/" onClick={closeMenu}>
         <h1>Salman.</h1>
       </Link>
-      {/* <ul>
-        <a href="">About me</a>
-        <a href="">My Work</a>
-        <a href="">Blog</a>
-      </ul> */}
-      <ul>
-        <Link to="/">About me</Link>
-        <Link to="/projects">My Work</Link>
-        <Link to="/blog">Blog</Link>
+
+      {/* Hamburger Menu Button */}
+      <button
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Navigation Links */}
+      <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+        <Link to="/" onClick={closeMenu}>
+          About me
+        </Link>
+        <Link to="/projects" onClick={closeMenu}>
+          My Work
+        </Link>
+        <Link to="/blog" onClick={closeMenu}>
+          Blog
+        </Link>
       </ul>
-      {/* <div className="buttons">
-        <button>Lets Connect</button>
-        <button>See My Work</button>
-      </div> */}
+
+      {/* Overlay for mobile menu */}
+      {isMenuOpen && <div className="menu-overlay" onClick={closeMenu}></div>}
     </div>
   );
 }
