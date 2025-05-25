@@ -17,3 +17,15 @@
   display: flex;
   justify-content: center;
 }
+
+/* Essential dark mode prevention */
+html,
+body {
+  background-color: white !important;
+  color: black !important;
+  color-scheme: light only;
+}
+
+* {
+  color-scheme: light only;
+}
