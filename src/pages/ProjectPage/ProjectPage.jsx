@@ -1,16 +1,29 @@
-// import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import "./ProjectPage.css";
 
-// import { getProject } from "../../services/projectService";
-import useProject from "../../hooks/useProject";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
+import useProject from "../../hooks/useProject";
+
+//Componenets
 
 function ProjectPage() {
   const { slug } = useParams();
-
   const { project, loading, error } = useProject(slug);
   const navigate = useNavigate();
+
+  const handleVeiwLiveClicked = () => {
+    window.open(project.demo_url);
+  };
+
+  if (loading) {
+    return <div className="text-center mt-10">Loading...</div>;
+  }
+  if (error) {
+    return (
+      <div className="text-center mt-12">Hmm...there seems to be an error</div>
+    );
+  }
 
   return (
     <div className="project-page">
@@ -41,133 +54,21 @@ function ProjectPage() {
 
       <div className="main">
         <img src={project.image_path} alt="" />
+
         <div className="text">
           <div className="tags">
-            <li>Nextjs</li>
-            <li>Supabase</li>
-            <li>Openai</li>
+            {project.technologies?.split(",").map((tech, index) => (
+              <li key={index}>{tech.trim()}</li>
+            ))}
           </div>
           <h1>{project.title}</h1>
 
           <p>{project.body}</p>
-          <button>View Live</button>
+          <button onClick={handleVeiwLiveClicked}>View Live</button>
         </div>
       </div>
       <div className="details">
         <h2>More Details</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
-        <div className="containers">
-          <div className="container">
-            <h3>Intro</h3>
-            <svg
-              width="36px"
-              height="36px"
-              viewBox="0 0 1024 1024"
-              fill="#000000"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M478.312 644.16c24.38 26.901 64.507 26.538 88.507-0.89l270.57-309.222c7.758-8.867 6.86-22.344-2.008-30.103-8.866-7.759-22.344-6.86-30.103 2.007L534.71 615.173c-7.202 8.231-17.541 8.325-24.782 0.335L229.14 305.674c-7.912-8.73-21.403-9.394-30.133-1.482s-9.394 21.403-1.482 30.134l280.786 309.833z"
-                  fill=""
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div className="container">
-            <h3>Story Behind this Project</h3>
-            <svg
-              width="36px"
-              height="36px"
-              viewBox="0 0 1024 1024"
-              fill="#000000"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M478.312 644.16c24.38 26.901 64.507 26.538 88.507-0.89l270.57-309.222c7.758-8.867 6.86-22.344-2.008-30.103-8.866-7.759-22.344-6.86-30.103 2.007L534.71 615.173c-7.202 8.231-17.541 8.325-24.782 0.335L229.14 305.674c-7.912-8.73-21.403-9.394-30.133-1.482s-9.394 21.403-1.482 30.134l280.786 309.833z"
-                  fill=""
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div className="container">
-            <h3>Struggles Faced</h3>
-            <svg
-              width="36px"
-              height="36px"
-              viewBox="0 0 1024 1024"
-              fill="#000000"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M478.312 644.16c24.38 26.901 64.507 26.538 88.507-0.89l270.57-309.222c7.758-8.867 6.86-22.344-2.008-30.103-8.866-7.759-22.344-6.86-30.103 2.007L534.71 615.173c-7.202 8.231-17.541 8.325-24.782 0.335L229.14 305.674c-7.912-8.73-21.403-9.394-30.133-1.482s-9.394 21.403-1.482 30.134l280.786 309.833z"
-                  fill=""
-                ></path>
-              </g>
-            </svg>
-          </div>
-          <div className="container">
-            <h3>Next Steps</h3>
-            <svg
-              width="36px"
-              height="36px"
-              viewBox="0 0 1024 1024"
-              fill="#000000"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M478.312 644.16c24.38 26.901 64.507 26.538 88.507-0.89l270.57-309.222c7.758-8.867 6.86-22.344-2.008-30.103-8.866-7.759-22.344-6.86-30.103 2.007L534.71 615.173c-7.202 8.231-17.541 8.325-24.782 0.335L229.14 305.674c-7.912-8.73-21.403-9.394-30.133-1.482s-9.394 21.403-1.482 30.134l280.786 309.833z"
-                  fill=""
-                ></path>
-              </g>
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
   );

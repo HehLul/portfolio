@@ -14,10 +14,10 @@
   gap: 6rem;
 }
 .project-page > .main > .text {
-  max-width: 55vw;
+  max-width: 50vw;
 }
 .project-page > .main > img {
-  height: 300px;
+  height: 360px;
   width: auto;
   object-fit: contain; /* or cover */
   border-radius: 0.5rem;
@@ -42,7 +42,7 @@
 .project-page .tags {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .project-page .tags li {
